@@ -1,0 +1,74 @@
+package Session5;
+
+// Program to calculate the area of triangle and rectangle using single inheritance
+import java.util.Scanner;
+
+class Area {
+	
+	int length,breadth;
+	float area;
+	public int getLength() {
+		return length;
+	}
+	public void setLength(int length) {
+		this.length = length;
+	}
+	public int getBreadth() {
+		return breadth;
+	}
+	public float getArea() {
+		return area;
+	}
+	public void setArea(float area) {
+		this.area = area;
+	}
+	public void setBreadth(int breadth) {
+		this.breadth = breadth;
+	}
+	
+	public float areaCalculation()
+	{
+		return area; 
+	}
+	
+}
+
+class Rectangle extends Area
+{
+	
+	public float areaCalculation()
+	{
+		area = length * breadth;
+		return area;
+	}
+}
+
+class Triangle extends Area
+{
+	
+	public float areaCalculation()
+	{
+		area = (length * breadth)/2;
+		return area;
+	}
+}
+class Assignment1 extends Area
+{
+	public static void main(String args[])
+	{
+		Scanner input = new Scanner(System.in);
+		Rectangle r = new Rectangle();
+		System.out.println("Enter the length and breadth of rectangle");
+		r.setLength(input.nextInt());
+		r.setBreadth(input.nextInt());
+		r.setArea(r.areaCalculation());
+		Triangle t = new Triangle();
+		System.out.println("Enter the length and height of triangle");
+		t.setLength(input.nextInt());
+		t.setBreadth(input.nextInt());
+		t.setArea(t.areaCalculation());
+		System.out.println("The area of rectangle is "+r.getArea());
+		System.out.println("The area of triangle is "+t.getArea());
+	}
+	
+}
