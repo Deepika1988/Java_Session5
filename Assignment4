@@ -1,0 +1,50 @@
+package Session5;
+
+class Bank
+{
+	public float rateOfInterest;
+
+	public float getRateOfInterest() {
+		return rateOfInterest;
+	}
+}
+class ICICI extends Bank
+{
+	public float getRateOfInterest()
+	{
+		rateOfInterest = 7;
+		return rateOfInterest;
+	}
+	
+}
+
+class SBI extends Bank
+{
+	public float getRateOfInterest()
+	{
+		rateOfInterest = 6;
+		return rateOfInterest;
+	}
+	
+}
+class Axis extends Bank
+{
+	public float getRateOfInterest()
+	{
+		rateOfInterest = 8;
+		return rateOfInterest;
+	}
+	
+}
+public class Assignment4 {
+
+	public static void main(String args[])
+	{
+		Bank b1 = new ICICI();
+		System.out.println("The rate of interest for ICICI Bank is "+ b1.getRateOfInterest());
+		Bank b2 = new SBI();
+		System.out.println("The rate of interest for SBI is "+ b2.getRateOfInterest());
+		Bank b3 = new Axis();
+		System.out.println("The rate of interest for Axis Bank  is "+ b3.getRateOfInterest());
+	}
+}
