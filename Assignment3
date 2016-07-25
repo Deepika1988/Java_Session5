@@ -1,0 +1,30 @@
+//Program to calculate the area of square and rectangles using constructor overloading.
+
+package Session5;
+
+import java.util.Scanner;
+
+class AreaCalculation
+{
+	float area;
+	
+	public AreaCalculation(float length)
+	{
+		area = length * length;
+	}
+	public AreaCalculation(float length, float breadth)
+	{
+		area = length * breadth;
+	}
+}
+public class Assignment3 {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the side of the square");
+		AreaCalculation square = new AreaCalculation(s.nextFloat());
+		System.out.println("The area of square is "+square.area);
+		System.out.println("Enter the side of the length and breadth of the rectangle");
+		AreaCalculation rectangle = new AreaCalculation(s.nextFloat(),s.nextFloat());
+		System.out.println("The area of rectangle is "+rectangle.area);
+	}
+}
