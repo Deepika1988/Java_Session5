@@ -1,0 +1,79 @@
+package Session5;
+
+class Building
+{
+	public float area,length,breadth;
+	public int noOfFloors;
+	public float getArea() {
+		return area;
+	}
+	public void setArea(float area) {
+		this.area = area;
+	}
+	public float getLength() {
+		return length;
+	}
+	public void setLength(float length) {
+		this.length = length;
+	}
+	public float getBreadth() {
+		return breadth;
+	}
+	public void setBreadth(float breadth) {
+		this.breadth = breadth;
+	}
+	public int getNoOfFloors() {
+		return noOfFloors;
+	}
+	public void setNoOfFloors(int noOfFloors) {
+		this.noOfFloors = noOfFloors;
+	}
+	
+}
+
+class Apartment extends Building
+{
+	Apartment()
+	{
+		setArea(2200.12f);
+		setBreadth(120.12f);
+		setLength(156.11f);
+		setNoOfFloors(4);
+		
+	}
+	
+}
+class Independent extends Building
+{
+	Independent()
+	{
+		setArea(3200.12f);
+		setBreadth(150.12f);
+		setLength(136.11f);
+		setNoOfFloors(2);
+		
+	}
+	
+}
+public class Assignment2 {
+
+	public static void main(String[] args) {
+		Apartment a1 = new Apartment();
+		Independent i1 = new Independent();
+		
+		System.out.println("The details of Apartment are ");
+		System.out.println("Area "+a1.getArea());
+		System.out.println("Length "+a1.length);
+		System.out.println("Breadth "+a1.getBreadth());
+		System.out.println("No of floors "+a1.getNoOfFloors());
+		
+		System.out.println("The details of Independent house are ");
+		System.out.println("Area "+i1.getArea());
+		System.out.println("Length "+i1.length);
+		System.out.println("Breadth "+i1.getBreadth());
+		System.out.println("No of floors "+i1.getNoOfFloors());
+		
+
+	}
+
+}
